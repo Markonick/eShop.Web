@@ -9,10 +9,19 @@ namespace eShop.Web.Controllers
 {
     public class BasketController : Controller
     {
-        // GET: Basket
-        public ActionResult GetBasket()
+        private readonly IBasketService _basketSvc;
+
+        public BasketController(IBasketService basketSvc)
         {
-            return View();
+            _basketSvc = basketSvc;
+        }
+
+        // GET: Basket
+        public async Task<IActionResult> Index()
+        {
+            var user = new object(); //TODO:create an applicationUser class
+            var viewModel = await _basketSvc.GetBasketAsync(user);
+            return View(viewModel);
         }
 
         // GET: Basket/Details/5
