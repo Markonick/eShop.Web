@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using eShop.Web.ViewModels;
 
-namespace eShop.Web.Controllers
+namespace eShop.Web.Services
 {
     public interface IBasketService
     {

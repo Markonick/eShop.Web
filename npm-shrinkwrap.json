@@ -1,5 +1,5 @@
 {
-  "name": "eShop_Web",
+  "name": "eShop.Web",
   "version": "0.0.0",
   "dependencies": {
     "@types/webpack-env": {
